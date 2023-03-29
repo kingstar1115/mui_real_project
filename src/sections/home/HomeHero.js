@@ -70,12 +70,7 @@ export default function HomeHero() {
   return (
     <MotionContainer>
       <RootStyle>
-        <HeroOverlayStyle
-          alt="overlay"
-          src="https://minimal-assets-api.vercel.app/assets/overlay.svg"
-          variants={varFade().in}
-        />
-
+        
         <HeroImgStyle
           alt="hero"
           src="https://minimal-assets-api.vercel.app/assets/images/home/hero.png"

@@ -108,21 +108,32 @@ function AuthProvider({ children }) {
     initialize();
   }, []);
 
-  const login = async (email, password) => {
-    const response = await axios.post('/api/account/login', {
-      email,
-      password,
-    });
-    const { accessToken, user } = response.data;
-
-    setSession(accessToken);
+  const login = (email, password) => {
+    setSession(email + password);
+    // consoo
     dispatch({
       type: 'LOGIN',
       payload: {
-        user,
+        email
       },
     });
-  };
+  }
+
+  // const login = async (email, password) => {
+  //   const response = await axios.post('/api/account/login', {
+  //     email,
+  //     password,
+  //   });
+  //   const { accessToken, user } = response.data;
+
+  //   setSession(accessToken);
+  //   dispatch({
+  //     type: 'LOGIN',
+  //     payload: {
+  //       user,
+  //     },
+  //   });
+  // };
 
   const register = async (email, password, firstName, lastName) => {
     const response = await axios.post('/api/account/register', {

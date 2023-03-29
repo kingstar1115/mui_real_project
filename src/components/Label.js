@@ -21,7 +21,7 @@ const RootStyle = styled('span')(({ theme, ownerState }) => {
 
   const styleGhost = (color) => ({
     color: theme.palette[color][isLight ? 'dark' : 'light'],
-    backgroundColor: alpha(theme.palette[color].main, 0.16),
+    backgroundColor: alpha(theme.palette[color].main, 0.0),
   });
 
   return {

@@ -55,7 +55,7 @@ export default function MainHeader() {
   const isDesktop = useResponsive('up', 'md');
 
   const isHome = pathname === '/';
-
+  
   return (
     <AppBar sx={{ boxShadow: 0, bgcolor: 'transparent' }}>
       <ToolbarStyle
@@ -75,22 +75,9 @@ export default function MainHeader() {
           }}
         >
           <Logo />
-
-          <Label color="info" sx={{ ml: 1 }}>
-            v3.0.0
-          </Label>
           <Box sx={{ flexGrow: 1 }} />
 
           {isDesktop && <MenuDesktop isOffset={isOffset} isHome={isHome} navConfig={navConfig} />}
-
-          <Button
-            variant="contained"
-            target="_blank"
-            rel="noopener"
-            href="https://material-ui.com/store/items/minimal-dashboard/"
-          >
-            Purchase Now
-          </Button>
 
           {!isDesktop && <MenuMobile isOffset={isOffset} isHome={isHome} navConfig={navConfig} />}
         </Container>

@@ -7,7 +7,12 @@ export const colorPresets = [
   // DEFAULT
   {
     name: 'default',
-    ...palette.light.primary,
+    lighter: '#D1FFFC',
+    light: '#76F2FF',
+    main: '#1CCAFF',
+    dark: '#0E77B7',
+    darker: '#053D7A',
+    contrastText: palette.light.grey[800],
   },
   // PURPLE
   {

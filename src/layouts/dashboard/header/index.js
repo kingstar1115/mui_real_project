@@ -71,7 +71,7 @@ export default function DashboardHeader({ onOpenSidebar, isCollapse = false, ver
         }}
       >
         {isDesktop && verticalLayout && <Logo sx={{ mr: 2.5 }} />}
-
+      
         {!isDesktop && (
           <IconButtonAnimate onClick={onOpenSidebar} sx={{ mr: 1, color: 'text.primary' }}>
             <Iconify icon="eva:menu-2-fill" />
